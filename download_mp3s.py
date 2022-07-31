@@ -48,9 +48,10 @@ def ScrapeVidId(query):
 	return results['href'].split('/watch?v=')[1]
 
 def __main__():
-
-	data = pandas.read_csv('songs.csv')
-	data = data['colummn'].tolist()
-	print("Found ", len(data), " songs!")
-	DownloadVideosFromTitles(data[0:1])
+	print("Starting")
+	login()
+	#data = pandas.read_csv('songs.csv')
+	#data = data['colummn'].tolist()
+	#print("Found ", len(data), " songs!")
+	#DownloadVideosFromTitles(data[0:1])
 __main__()
