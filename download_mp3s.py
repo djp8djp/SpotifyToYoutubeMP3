@@ -6,6 +6,9 @@ import requests
 import pandas
 import os
 
+#from app import get_all_tracks
+
+
 def DownloadVideosFromTitles(los):
 	ids = []
 	for index, item in enumerate(los):
@@ -48,10 +51,10 @@ def ScrapeVidId(query):
 	return results['href'].split('/watch?v=')[1]
 
 def __main__():
-	print("Starting")
-	login()
-	#data = pandas.read_csv('songs.csv')
-	#data = data['colummn'].tolist()
-	#print("Found ", len(data), " songs!")
-	#DownloadVideosFromTitles(data[0:1])
+	#print("Starting")
+	#login()
+	data = pandas.read_csv('songs.csv')
+	data = data['colummn'].tolist()
+	print("Found ", len(data), " songs!")
+	DownloadVideosFromTitles(data[0:1])
 __main__()
